@@ -1,0 +1,57 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.table-container {  /*calling a class*/
+    display: grid;
+    /* 18 Groups in the periodic table */
+    grid-template-columns: repeat(18, 1fr); /*creates 18 columns*/
+    gap: 4px; /*between each element box*/
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Individual Element Box */
+.element-card {   /*class named for small boxes of each element, so each box can be styled accordingly*/
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Hover Effect Requirement */
+.element-card:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: #000;
+}
+
+/* Text styling inside boxes */
+.atomic-number { font-size: 0.7rem; font-weight: bold; text-align: left; display: block; }
+.symbol { font-size: 1.2rem; font-weight: bold; display: block; margin: 2px 0; }
+.name { font-size: 0.6rem; display: block; overflow: hidden; white-space: nowrap; }
+
+/* Color Coding Categories */
+.alkali-metal { background-color: #ffb3ba; }
+.alkaline-earth { background-color: #ffdfba; }
+.transition-metal { background-color: #ffffba; }
+.post-transition-metal { background-color: #baffc9; }
+.metalloid { background-color: #bae1ff; }
+.non-metal { background-color: #e0bbe4; }
+.noble-gas { background-color: #d4f0f0; }
+.halogen { background-color: #f9d1d1; }
+.lanthanide { background-color: #d1ffde; }
+.actinide { background-color: #ffd1fb; }
